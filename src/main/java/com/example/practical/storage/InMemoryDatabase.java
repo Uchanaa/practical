@@ -1,6 +1,7 @@
 package com.example.practical.storage;
 
 
+import com.example.practical.model.Order;
 import com.example.practical.model.Product;
 import com.example.practical.model.User;
 import org.springframework.stereotype.Repository;
@@ -14,6 +15,8 @@ import java.util.concurrent.atomic.AtomicLong;
 public class InMemoryDatabase {
     public final Map<Long, Product> products = new HashMap<>();
     public final Map<String, User> users = new HashMap<>();
+    public final Map<Long, Order> orders = new HashMap<>();
+
     public final AtomicLong productIdGenerator = new AtomicLong(1);
     public final AtomicLong orderIdGenerator = new AtomicLong(1);
 
