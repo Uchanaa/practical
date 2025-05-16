@@ -17,6 +17,7 @@ public class InMemoryDatabase {
     public final Map<String, User> users = new HashMap<>();
     public final Map<Long, Order> orders = new HashMap<>();
 
+
     public final AtomicLong productIdGenerator = new AtomicLong(1);
     public final AtomicLong orderIdGenerator = new AtomicLong(1);
 
